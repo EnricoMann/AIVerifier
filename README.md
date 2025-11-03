@@ -172,7 +172,7 @@ docker compose logs backend -f
 ## 🧠 Demo Video
 
 🎥 Watch the 1:25 demo on
-[LinkedIn](https://linkedin.com/in/enricomann)\
+[LinkedIn](https://linkedin.com/in/enrico-mann)\
 See how the app verifies claims and generates instant summaries using
 local AI.
 
