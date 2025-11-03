@@ -8,7 +8,7 @@ router = APIRouter()
 OLLAMA_URL = "http://ollama:11434/api/generate"
 MODEL_NAME = "llama3"
 
-# Cache simples para traduções repetidas
+# For repetitive translations
 TRANSLATION_CACHE = {}
 
 
@@ -25,7 +25,7 @@ def clean_summary(text: str) -> str:
 
 async def translate_to_english(client, text: str) -> str:
     """
-    Usa o modelo do Ollama para traduzir o texto para inglês puro.
+    Translate to english
     """
     if not text:
         return text
@@ -58,8 +58,8 @@ async def translate_to_english(client, text: str) -> str:
 @router.post("/analyze")
 async def analyze(payload: dict):
     """
-    Recebe o resultado do fact-check (claim + sources)
-    e retorna resumos da IA para cada fonte, com tradução e limpeza.
+    Receives the result from fact-check (claim + sources)
+    and returns summaries from IA from each source, with translation.
     """
     claim = payload.get("claim")
     sources = payload.get("sources")
@@ -76,16 +76,16 @@ async def analyze(payload: dict):
             url = s.get("url", "")
             rating = s.get("rating", "Not rated")
 
-            # Limpeza básica antes da tradução
+            # Cleaning before translation
             title = re.sub(r"[^\w\s.,!?-]", "", title).strip()
             rating = rating.replace(":", "").capitalize()
 
-            # 🔹 Tradução automática
+            # 🔹 Translation
             title_en = await translate_to_english(client, title)
             publisher_en = await translate_to_english(client, publisher)
             rating_en = await translate_to_english(client, rating)
 
-            # 🔹 Prompt refinado
+            # 🔹 Prompt
             prompt = f"""
 You are an AI fact-checking assistant.
 Summarize the verified article below in 2–3 sentences of clear, neutral English.

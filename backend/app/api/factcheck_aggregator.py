@@ -100,7 +100,7 @@ async def fetch_afp(query: str):
         print(f"⚠️ AFP error: {e}")
         return []
 
-# --- Agregador principal ---
+# --- Aggregator ---
 async def aggregate_factchecks(query: str):
     results = await asyncio.gather(
         fetch_google_factcheck(query),

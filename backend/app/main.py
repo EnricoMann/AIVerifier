@@ -4,7 +4,7 @@ from app.api.routes import router
 
 app = FastAPI(title="AI Verifier API")
 
-# ✅ Middleware de CORS — permite que o frontend (porta 3000) acesse o backend
+# ✅ CORS Middleware
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],  # ou ["*"] se quiser liberar geral
@@ -13,7 +13,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ✅ Inclui as rotas da API (verify, analyze, etc.)
+# ✅ Routes
 app.include_router(router)
 
 @app.get("/health")
