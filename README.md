@@ -1,4 +1,4 @@
-# 🤖 AI Verifier
+#  AI Verifier
 
 **Analyze any claim --- powered by AI and trusted fact-checking
 sources.**\
@@ -9,7 +9,7 @@ models.
 
 ------------------------------------------------------------------------
 
-## 🧠 Overview
+##  Overview
 
 AI Verifier is a local showcase project built to demonstrate how
 artificial intelligence can assist in verifying news, claims, or online
@@ -23,7 +23,7 @@ clean, and fully containerized using Docker.
 
 ------------------------------------------------------------------------
 
-## 🧩 Architecture
+##  Architecture
 
     frontend/   → Next.js + TailwindCSS interface
     backend/    → FastAPI application (API routes, AI integration, and database)
@@ -42,7 +42,7 @@ The app follows a **3-tier architecture**:
 
 ------------------------------------------------------------------------
 
-## ⚙️ Tech Stack
+##  Tech Stack
 
   Layer              Technologies
   ------------------ ---------------------------------
@@ -54,7 +54,7 @@ The app follows a **3-tier architecture**:
 
 ------------------------------------------------------------------------
 
-## 🔧 Environment Variables
+##  Environment Variables
 
 Before running, create a `.env` file in the root directory (based on
 `.env.example`):
@@ -94,7 +94,7 @@ Then open your browser at:
 
 ------------------------------------------------------------------------
 
-## 🧠 How It Works
+##  How It Works
 
 1.  **User inputs a claim** (e.g. "NASA confirms new life on Mars").\
 2.  **Backend** queries multiple **fact-check APIs** for relevant
@@ -108,7 +108,7 @@ Then open your browser at:
 
 ------------------------------------------------------------------------
 
-## 🪶 UI Highlights
+##  UI Highlights
 
 -   Clean, modern design using **TailwindCSS**
 -   Responsive layout (works beautifully on desktop and mobile)
@@ -119,7 +119,7 @@ Then open your browser at:
 
 ------------------------------------------------------------------------
 
-## 🧰 Development Tips
+##  Development Tips
 
 Useful commands for local development:
 
@@ -136,7 +136,7 @@ docker compose logs backend -f
 
 ------------------------------------------------------------------------
 
-## 🧱 Project Structure
+##  Project Structure
 
     ai-verifier/
     ├── backend/
@@ -159,7 +159,7 @@ docker compose logs backend -f
 
 ------------------------------------------------------------------------
 
-## 🧩 Future Improvements
+##  Future Improvements
 
 -   Add support for multiple AI models (e.g., Mistral, Phi-3)
 -   Integrate with OpenAI or Anthropic for optional cloud analysis
@@ -169,7 +169,7 @@ docker compose logs backend -f
 
 ------------------------------------------------------------------------
 
-## 🧠 Demo Video
+##  Demo Video
 
 🎥 Watch the 1:25 demo on
 [LinkedIn](https://linkedin.com/in/enrico-mann)\
@@ -178,7 +178,7 @@ local AI.
 
 ------------------------------------------------------------------------
 
-## 👨‍💻 Author
+##  Author
 
 **Built by [Enrico Mann](https://github.com/EnricoMann)**\
 💡 Web & Data Engineer passionate about AI, data pipelines, and
